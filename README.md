@@ -19,15 +19,19 @@ Worm Wars is a turn-based artillery game in the style of Worms 2. It runs in the
 - **Music and sound.** All audio is synthesized live with the Web Audio API, with no audio files. The music is original and procedurally composed: a menu theme, four battle tracks and a victory fanfare. Sound effects include explosions, shots, jumps, splashes and worm voice chirps. There's a mute toggle.
 
 ## The worms
-The worms are cartoon characters in the Worms 2 style:
-- **Body:** a segmented pink body that tapers to a curled tail.
-- **Eyes:** big googly eyes that blink and follow the aim direction or incoming projectiles.
-- **Face:** eyebrows and a mouth that change expression. They grin by default, look worried when health is low, water is near or a projectile is close, look shocked when hit, and look determined while charging a shot.
-- **Headband:** in the team colour, with fluttering tails.
-- **Animation:** an idle wiggle and breathing, a crawling walk, and squash and stretch on jumps and landings. The worm holds its current weapon.
-- **Death and victory:** a worm wobbles in shock before its death blast, then a gravestone drops in its place. The winning team does a hopping victory dance.
+The worms are drawn in the Worms 2 style as smooth vector art. Each body is drawn at 4× resolution with canvas curves, then used as a sprite.
+- **Body:** an upright S-curve, fat at the round head and tapering to a small tail curled on the ground. It has a thick dark outline, gradient shading, a rim highlight, a lighter belly with subtle creases and a soft ground shadow. There are no segment rings.
+- **Eyes:** big white oval eyes, close together on top of the head. They have black pupils that track the aim (or incoming shots) and eyelids that blink.
+- **Face:** eyebrows, a large mouth and cheeks. The expressions are happy, grin, worried (with a sweat drop), shocked and determined.
+- **Bandana:** in the team colour, wrapped across the forehead under the eyes, with a knot and fluttering tails.
+- **Animation:** idle wiggle and breathing, a crawl cycle when walking, and squash and stretch on jumps and landings. The worm holds its weapon at the aim angle.
+- **Death and victory:** a worm wobbles in shock before its death blast, then a gravestone drops in its place. The winners do a hopping victory dance.
+
+![Expression sheet](shots/wc_sheet.png)
 
 ![Worm close-up](shots/wc_idle.png)
+
+![In battle](shots/battle_winter.png)
 
 ## Running locally
 ES modules need an HTTP server, so double-clicking `index.html` won't work. From the repo folder, run:
