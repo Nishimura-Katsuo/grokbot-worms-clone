@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Worm Wars — a Worms 2 tribute</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,"><link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"./three.module.js"}}</script>
+</head><body>
+<div id="labels"></div>
+<div id="hud" class="hidden">
+  <div id="wind"><div class="wl">WIND</div><div id="windbar"><div id="windL"></div><div id="windR"></div><i></i></div></div>
+  <div id="timer">45</div>
+  <div id="teams"></div>
+  <div id="weapon"><canvas id="wicon" width="64" height="64"></canvas><div><b id="wname">Bazooka</b><span id="wextra"></span></div></div>
+  <div id="btns"><span id="spec" class="hidden">SPECTATOR</span><button id="bspeed" title="Speed (1-4 in spectator / +)">1×</button><button id="bpause" title="Pause (P)">❚❚</button><button id="bmute" title="Mute (M)">♪</button><button id="bweap" title="Weapons (Tab / right-click)">☰</button></div>
+  <div id="banner"></div>
+  <div id="help">←→ walk · ↑↓ aim · Enter jump · Backspace backflip · Space fire (hold) · Tab/Right-click weapons · 1-5 fuse · Click target · P pause · M mute</div>
+</div>
+<div id="wmenu" class="hidden"></div>
+<div id="paused" class="hidden"><div>PAUSED</div><small>press P to resume</small></div>
+<div id="menu" class="overlay">
+  <div class="panel">
+    <h1>WORM WARS</h1><div class="sub">a Worms&nbsp;2 tribute · made with Grok Bot</div>
+    <div class="row"><label>Teams</label><div class="seg" id="nteams"></div></div>
+    <div id="teamrows"></div>
+    <div class="row"><label>Worms per team</label><div class="seg" id="nworms"></div></div>
+    <div class="row"><label>Turn time</label><div class="seg" id="ttime"></div></div>
+    <div class="row"><label>Landscape</label><div class="seg" id="theme"></div></div>
+    <div class="row"><label>Sudden death</label><div class="seg" id="sdeath"></div></div>
+    <div class="go"><button id="start" class="big">FIGHT!</button><button id="demo" class="big alt">WATCH CPU BATTLE</button></div>
+    <div class="tip">Set every team to CPU to spectate a fully AI match.</div>
+  </div>
+</div>
+<div id="win" class="overlay hidden"><div class="panel"><h1 id="wintitle">VICTORY</h1><div id="winsub" class="sub"></div><div id="winstats"></div><div class="go"><button id="again" class="big">REMATCH</button><button id="tomenu" class="big alt">MAIN MENU</button></div></div></div>
+<script type="module" src="./main.js"></script>
+</body></html>
