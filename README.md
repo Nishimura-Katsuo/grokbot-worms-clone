@@ -18,6 +18,17 @@ Worm Wars is a turn-based artillery game in the style of Worms 2. It runs in the
 - **Spectator mode.** Set every team to CPU, or click **WATCH CPU BATTLE**, to watch a fully AI-driven match. The camera follows the shooter, the target, projectiles and explosions. You can change the speed (1×, 2×, 4× or 8×) and pause, and the match plays through to the victory screen.
 - **Music and sound.** All audio is synthesized live with the Web Audio API, with no audio files. The music is original and procedurally composed: a menu theme, four battle tracks and a victory fanfare. Sound effects include explosions, shots, jumps, splashes and worm voice chirps. There's a mute toggle.
 
+## The worms
+The worms are cartoon characters in the Worms 2 style:
+- **Body:** a segmented pink body that tapers to a curled tail.
+- **Eyes:** big googly eyes that blink and follow the aim direction or incoming projectiles.
+- **Face:** eyebrows and a mouth that change expression. They grin by default, look worried when health is low, water is near or a projectile is close, look shocked when hit, and look determined while charging a shot.
+- **Headband:** in the team colour, with fluttering tails.
+- **Animation:** an idle wiggle and breathing, a crawling walk, and squash and stretch on jumps and landings. The worm holds its current weapon.
+- **Death and victory:** a worm wobbles in shock before its death blast, then a gravestone drops in its place. The winning team does a hopping victory dance.
+
+![Worm close-up](shots/wc_idle.png)
+
 ## Running locally
 ES modules need an HTTP server, so double-clicking `index.html` won't work. From the repo folder, run:
 
@@ -51,6 +62,11 @@ Jet pack: ← → and ↑ to thrust.
 | ![Menu](shots/menu.png) | ![Explosion](shots/explosion.png) |
 | ![Projectile](shots/projectile.png) | ![Alien](shots/alien.png) |
 | ![Weapons](shots/weapons.png) | ![Win](shots/win.png) |
+| ![Aiming](shots/wc_aim.png) | ![Shocked](shots/wc_shock.png) |
+| ![Worried](shots/wc_worried.png) | ![Victory dance](shots/wc_victory.png) |
+
+## Testing
+See [REVIEW.md](REVIEW.md) for the QA report and the headless stress and fuzz test flags.
 
 ## Files
 - `main.js`: rendering, terrain, physics, weapons, turn logic, AI and UI

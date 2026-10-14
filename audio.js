@@ -55,6 +55,7 @@ export class Sound{
   }
   stop(){this.track=null;}
   sched(){const s=this.track;if(!s||!this.ctx)return;
+    if(s.next<this.ctx.currentTime-.05)s.next=this.ctx.currentTime+.05; // tab was hidden: skip ahead instead of bursting
     while(s.next<this.ctx.currentTime+0.15){this.step(s,s.step,s.next);s.next+=s.spb*(s.P.style==='swing'&&s.step%2===0?1.18:s.P.style==='swing'?0.82:1);s.step++;
       if(s.P.style==='fanfare'&&s.step>=s.bars*16){this.track=null;return;}}}
   // ---------- instruments ----------
